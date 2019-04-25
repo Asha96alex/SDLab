@@ -1,0 +1,206 @@
+student@T15:~$ cd mca
+student@T15:~/mca$ cd ajce
+student@T15:~/mca/ajce$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T15:~/mca/ajce$ cd ..
+student@T15:~/mca$ cd rmca
+student@T15:~/mca/rmca$ cd new
+student@T15:~/mca/rmca/new$ ls
+b.txt  b.txt~
+student@T15:~/mca/rmca/new$ wc b.txt
+ 5  4 29 b.txt
+student@T15:~/mca/rmca/new$ wc -l b.txt
+5 b.txt
+student@T15:~/mca/rmca/new$ wc -c b.txt
+29 b.txt
+student@T15:~/mca/rmca/new$ wc -m b.txt
+29 b.txt
+student@T15:~/mca/rmca/new$ wc -L b.txt
+21 b.txt
+student@T15:~/mca/rmca/new$ wc -w b.txt
+4 b.txt
+student@T15:~/mca/rmca/new$ cat > a.txt
+1
+e
+hi
+hello
+ho
+u
+fyn
+tanxx
+student@T15:~/mca/rmca/new$ cut -c4 a.txt
+
+
+
+l
+
+
+
+x
+student@T15:~/mca/rmca/new$ cut -c1 a.txt
+1
+e
+h
+h
+h
+u
+f
+t
+student@T15:~/mca/rmca/new$ cut -c5 a.txt
+
+
+
+o
+
+
+
+x
+student@T15:~/mca/rmca/new$ cut -f5 a.txt
+1
+e
+hi
+hello
+ho
+u
+fyn
+tanxx
+student@T15:~/mca/rmca/new$ man cut
+student@T15:~/mca/rmca/new$ cut -b5 a.txt
+
+
+
+o
+
+
+
+x
+student@T15:~/mca/rmca/new$ cut -b1 a.txt
+1
+e
+h
+h
+h
+u
+f
+t
+student@T15:~/mca/rmca/new$ cut -b0 a.txt
+cut: byte/character positions are numbered from 1
+Try 'cut --help' for more information.
+student@T15:~/mca/rmca/new$ cut -b2 a.txt
+
+
+i
+e
+o
+
+y
+a
+student@T15:~/mca/rmca/new$ cat > d.txt
+dfgh
+
+
+ghjd
+
+f
+e
+
+
+df
+g
+d
+q
+dfg
+
+a
+
+
+student@T15:~/mca/rmca/new$ cut -b2 d.txt
+f
+
+
+h
+
+
+
+
+
+f
+
+
+
+f
+
+
+
+
+student@T15:~/mca/rmca/new$ cut -b2 d.txt
+f
+
+
+h
+
+
+
+
+
+f
+
+
+
+f
+
+
+
+
+student@T15:~/mca/rmca/new$ cut -f2 d.txt
+werty
+
+
+ghjd
+
+f
+e
+
+
+df
+g
+d
+q
+dfg
+
+a
+
+
+student@T15:~/mca/rmca/new$ cut -f2 d.txt
+werty
+
+
+ghjd
+
+f
+e
+
+
+df
+g
+fgh
+q
+dfg
+
+a
+
+
+student@T15:~/mca/rmca/new$ cut -c 4,5,6 d.txt
+h d
+
+
+d
+
+
+
+
+
+
+
+d  
+

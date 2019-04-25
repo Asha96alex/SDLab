@@ -1,0 +1,41 @@
+student@T15:~$ echo asha
+asha
+student@T15:~$ read a
+3
+student@T15:~$ echo $a
+3
+student@T15:~$ man echo
+student@T15:~$ man read
+student@T15:~$ man echo
+student@T15:~$ echo -e 'here\nthe\n line\n spaced'
+here
+the
+ line
+ spaced
+student@T15:~$ echo -e 'form\f feed\f'
+form
+     feed
+
+student@T15:~$ echo -e 'here the \r content before is removed'
+ content before is removed
+student@T15:~$ echo -e 'alert \a bell '
+alert  bell 
+student@T15:~$ echo -e 'alert \a bell '
+alert  bell 
+student@T15:~$ read
+a
+student@T15:~$ read -n 5 -p "enter 5 characters"
+enter 5 characters 1234student@T15:~$ echo $reply
+
+student@T15:~$ echo $p
+
+student@T15:~$ read a b
+2
+student@T15:~$ echo $a
+2
+student@T15:~$ read d c
+3 4
+student@T15:~$ echo $c
+4
+
+

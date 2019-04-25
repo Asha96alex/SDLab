@@ -1,0 +1,5 @@
+echo "the command is $0"
+echo  "the first argument is $1"
+echo  "the second argument is $#"
+echo  "the third argument is $*"
+echo  "the fourth argument is $@"

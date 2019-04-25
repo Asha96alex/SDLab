@@ -1,0 +1,175 @@
+student@T15:~$ expr 50 + 22.5
+expr: non-integer argument
+student@T15:~$ expr 50 + 22
+72
+student@T15:~$ expr 36 \* 4
+144
+student@T15:~$ a=10
+student@T15:~$ sum=`$a + 1`
+10: command not found
+student@T15:~$ echo $a
+10
+student@T15:~$ sum=`$a+1`
+10+1: command not found
+student@T15:~$ $a=`$a+1`
+10+1: command not found
+10=: command not found
+student@T15:~$ $a=`$a + 1`
+10: command not found
+10=: command not found
+student@T15:~$ a=17
+student@T15:~$ a=`expr $a + 1`
+student@T15:~$ echo $a
+18
+student@T15:~$ z=12
+student@T15:~$ z=`expr $z - 1`
+student@T15:~$ echo $z
+11
+student@T15:~$ k=56
+student@T15:~$ k=`expr $k \* 2`
+student@T15:~$ echo $k
+112
+student@T15:~$ e=30
+student@T15:~$ e=`expr $e % 2
+> 
+> 
+> kk
+> bash: unexpected EOF while looking for matching ``'
+bash: syntax error: unexpected end of file
+student@T15:~$ echo "enter two numbers"
+enter two numbers
+student@T15:~$ read x
+3
+student@T15:~$ read y
+5
+student@T15:~$ sum=`expr $x + $y`
+student@T15:~$ echo "sum=$sum"
+sum=8
+student@T15:~$ echo enter three numbers
+enter three numbers
+student@T15:~$ read a
+5
+student@T15:~$ read b
+10
+student@T15:~$ read c
+15
+student@T15:~$ sum=`expr $a + $b + $c`
+student@T15:~$ echo "sum=$sum"
+sum=30
+student@T15:~$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T15:~$ 
+student@T15:~$ a=asha
+student@T15:~$ len=`expr length $a`
+student@T15:~$ echo $len
+4
+student@T15:~$ a=asha alexxx
+alexxx: command not found
+student@T15:~$ a=ashaalexxx
+student@T15:~$ len=`expr length $a`
+student@T15:~$ echo $len
+10
+student@T15:~$ a= hello
+
+Command 'hello' not found, but can be installed with:
+
+apt install hello            
+apt install hello-traditional
+
+Ask your administrator to install one of them.
+
+student@T15:~$ a=hello
+student@T15:~$ b=world
+student@T15:~$ comp=`expr compare $a$b
+> `
+expr: syntax error
+student@T15:~$ comp=`expr compare $a$b
+``
+> `
+expr: syntax error
+student@T15:~$ comp=`expr concatenate $a$b
+`
+expr: syntax error
+student@T15:~$ comp=`expr match $a$b
+`
+expr: syntax error
+student@T15:~$ a=sak
+student@T15:~$ b=dfgh
+student@T15:~$ comp=`expr match $a$b
+`
+expr: syntax error
+student@T15:~$ a=hello
+student@T15:~$ b=world
+student@T15:~$ sub=`expr substr $a$b`
+expr: syntax error
+student@T15:~$ a=helloworld
+student@T15:~$ sub=`expr substr $a 6 10`
+student@T15:~$ echo $sub
+world
+student@T15:~$ a=hello
+student@T15:~$ b=world
+student@T15:~$ mat=`expr match $a$b`
+expr: syntax error
+student@T15:~$ mat=`expr  $a = $b`
+student@T15:~$ echo $mat
+0
+student@T15:~$ a=hii
+student@T15:~$ b=hii
+student@T15:~$ mat=`expr $a = $b`
+student@T15:~$ echo $mat
+1
+student@T15:~$ a=hello
+student@T15:~$ b=world
+student@T15:~$ com=`expr $a$b`
+student@T15:~$ echo $com
+helloworld
+student@T15:~$ 
+
